@@ -36,15 +36,15 @@ namespace ControllersExample.Controllers
     public PhysicalFileResult FileDownload2()
     {
       //return new PhysicalFileResult(@"c:\aspnetcore\sample.pdf", "application/pdf");
-      return PhysicalFile(@"c:\aspnetcore\sample.pdf", "application/pdf");
+      return PhysicalFile(@"C:\Users\TSPL\Pictures\Half-day Leave Application.png", "image/png");
     }
 
     [Route("file-download3")]
     public FileContentResult FileDownload3()
     {
-      byte[] bytes = System.IO.File.ReadAllBytes(@"c:\aspnetcore\sample.pdf");
+      byte[] bytes = System.IO.File.ReadAllBytes(@"C:\Users\TSPL\Pictures\Half-day Leave Application.png");
       //return new FileContentResult(bytes, "application/pdf");
-      return File(bytes,"application/pdf");
+      return File(bytes, "image/png");
     }
   }
 }
