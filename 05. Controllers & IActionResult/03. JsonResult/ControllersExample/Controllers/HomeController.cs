@@ -19,7 +19,10 @@ namespace ControllersExample.Controllers
     [Route("person")]
     public JsonResult Person()
     {
-      Person person = new Person() { Id = Guid.NewGuid(), FirstName = "James", LastName = "Smith", Age = 25 };
+      Person person = new Person() 
+      {
+          Id = Guid.NewGuid(), FirstName = "James", LastName = "Smith", Age = 25 
+      };
       //return new JsonResult(person);
       return Json(person);
       //return "{ \"key\": \"value\" }";
